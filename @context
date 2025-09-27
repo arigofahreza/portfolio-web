@@ -1,0 +1,60 @@
+# Context Instruction - Portfolio Website
+
+## Project Overview
+Membangun website portfolio untuk menampilkan profil sebagai **Data Engineer** dan **Backend Engineer**. Website ini berfungsi sebagai personal branding dan showcase project yang pernah dikerjakan.
+
+## Tech Stack
+- **Framework**: Next.js  
+- **Styling**: Tailwind CSS  
+- **Bahasa**: TypeScript  
+- **Deployment**: (opsional, bisa Netlify, Vercel, atau lainnya)
+
+## Referensi
+Desain terinspirasi dari:  
+[Portfolio Software Engineer - Product Manager - Community (Figma)](https://www.figma.com/design/2l7yGCBlW5d5KkwWlUvyq6/Portfolio---Software-Engineer---Product-Manager--Community-?node-id=101-9&p=f&t=kvUgCAKnlfXODNDI-0)
+
+## Pages & Sections
+1. **Hero Section**  
+   - Foto profil atau ilustrasi  
+   - Nama & role: *Data Engineer | Backend Engineer*  
+   - Tagline singkat (value proposition)  
+   - Call-to-Action button (misalnya: *Contact Me* atau *Download CV*)  
+
+2. **About Section**  
+   - Deskripsi singkat tentang background profesional  
+   - Skillset utama (misalnya: Python, Go, SQL, Kafka, Docker, Kubernetes)  
+
+3. **Experience Section**  
+   - Timeline pengalaman kerja  
+   - Posisi, perusahaan, periode, dan highlight pencapaian  
+
+4. **Portfolio Section**  
+   - Showcase project dengan grid cards  
+   - Informasi: judul, deskripsi singkat, tech stack, link repo/demo  
+
+5. **Skills Section**  
+   - List skill dengan icon (frontend, backend, data engineer tools, cloud, CI/CD)  
+   - Bisa dibagi ke kategori: *Programming Languages, Frameworks, Tools, Cloud Services*  
+
+6. **Contact Section**  
+   - Form kontak sederhana (nama, email, pesan)  
+   - Link ke email, LinkedIn, GitHub, dan sosial media  
+
+7. **Footer**  
+   - Copyright  
+   - Navigasi singkat  
+   - Social media links  
+
+## Design Guidelines
+- Clean & modern UI  
+- Mobile responsive (grid dan flex harus adaptif)  
+- Konsisten menggunakan Tailwind utility classes  
+- Minimalis dengan penggunaan whitespace yang baik  
+- Gunakan komponen yang reusable  
+
+## Code Guidelines
+- Struktur Next.js project sesuai best practice (`/components`, `/pages`, `/styles`, `/public`)  
+- Pisahkan komponen per section (Hero.tsx, About.tsx, dsb.)  
+- Gunakan TypeScript untuk type safety  
+- Clean code dengan konvensi penamaan konsisten  
+- Optimasi untuk performa (lazy load image, Next.js Image component)  
