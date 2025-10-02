@@ -30,7 +30,7 @@ export default function Footer() {
     },
     {
       name: 'Email',
-      href: 'mailto:your.email@example.com',
+      href: 'mailto:arigoarg@gmail.com',
       icon: FiMail
     }
   ]
@@ -46,12 +46,11 @@ export default function Footer() {
           <div className="md:col-span-2">
             <h3 className="text-2xl font-bold mb-4">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-                Your Name
+                Arigo Fahreza
               </span>
             </h3>
             <p className="text-gray-300 mb-6 max-w-md">
-              Data Engineer & Backend Engineer passionate about building scalable systems 
-              and transforming data into actionable insights.
+              Engineer specializing in data architecture, backend performance, and AI automation. Focused on scalability, efficiency, and innovation.
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((item) => (
@@ -90,8 +89,8 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-4">Get in Touch</h4>
             <div className="space-y-2 text-gray-300">
               <p>Jakarta, Indonesia</p>
-              <p>your.email@example.com</p>
-              <p>+62 123 456 7890</p>
+              <p>arigoarg@gmail.com</p>
+              <p>+62 812-3747-6923</p>
             </div>
           </div>
         </div>
@@ -99,7 +98,7 @@ export default function Footer() {
         {/* Bottom Section */}
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            © {currentYear} Your Name. All rights reserved.
+            © {currentYear} Arigo Fahreza. All rights reserved.
           </p>
           
           <button

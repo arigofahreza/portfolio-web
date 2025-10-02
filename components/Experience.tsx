@@ -6,43 +6,45 @@ import { FiCalendar, FiMapPin, FiBriefcase } from 'react-icons/fi'
 export default function Experience() {
   const experiences = [
     {
-      title: "Senior Data Engineer",
-      company: "Tech Company Inc.",
+      title: "Data Engineer",
+      company: "PT Sibernetik Integra Data",
       location: "Jakarta, Indonesia",
-      period: "2022 - Present",
+      period: "2023 - Present",
       description: [
-        "Designed and implemented real-time data pipelines processing 10TB+ daily using Apache Kafka and Apache Spark",
-        "Built scalable microservices architecture serving 1M+ API requests daily with 99.9% uptime",
-        "Led migration from monolithic to microservices architecture, reducing deployment time by 70%",
-        "Mentored junior developers and established best practices for code quality and testing"
+        "Designed and implemented real-time data pipelines processing Gigabytes daily using Confluent Kafka and Python",
+        "Built AI MCP Chatbot platform integrating NLP models to enhance customer support efficiency",
+        "Create Modern Data Warehouse solutions using Iceberg, Confluent Kafka, and Trino",
+        "Optimized ETL workflows for various format source with Python, reducing data processing by 40%",
+        "Implementing predictive analytics models using pycaret and Fastapi to improve business transaction decision-making"
       ],
-      technologies: ["Python", "Apache Kafka", "Docker", "Kubernetes", "PostgreSQL", "Redis"]
+      technologies: ["Python", "Confluent Kafka", "Docker", "Sqlite3", "PostgreSQL", "S3", "Trino", "Iceberg"]
     },
     {
-      title: "Backend Engineer",
-      company: "Startup Solutions",
+      title: "Backend Engineer | Data Engineer",
+      company: "PT Indonesia Indicator",
       location: "Jakarta, Indonesia", 
-      period: "2020 - 2022",
+      period: "2021 - 2023",
       description: [
-        "Developed RESTful APIs and GraphQL services using Go and Python",
-        "Optimized database queries and implemented caching strategies, improving response times by 60%",
-        "Built automated testing pipelines and CI/CD workflows using Jenkins and GitLab CI",
+        "Creating and managing Data Pipeline for covid 19 using Python, Kafka with ElasticsearchDB",
+        "Developed Web Maps API using MVT technologies and PostGIS DB with framework FastAPI and GIN Golang",
+        "Crawl and process online news data for sentiment analysis using Python and Playwright",
+        "Crawl Social media data (Twitter, Instagram, Youtube, Tiktok, Facebook) for sentiment analysis using Python",
         "Collaborated with frontend team to deliver full-stack features for web and mobile applications"
       ],
-      technologies: ["Go", "Python", "PostgreSQL", "MongoDB", "Docker", "AWS"]
+      technologies: ["Go", "Python", "PostgreSQL", "MongoDB", "Docker", "Elasticsearch"]
     },
     {
-      title: "Junior Data Engineer",
-      company: "Data Analytics Corp",
+      title: "Freelancer",
       location: "Jakarta, Indonesia",
-      period: "2019 - 2020", 
+      period: "2023 - Present", 
       description: [
-        "Created ETL pipelines for data ingestion from multiple sources (APIs, databases, files)",
-        "Developed data quality monitoring and alerting systems",
-        "Built interactive dashboards using Tableau and Power BI for business stakeholders",
-        "Automated manual data processes, saving 20+ hours per week"
+        "Crawl and process data from marketplace websites such as Tokopedia, Shopee, Bukalapak using Python and Playwright",
+        "Develop ETL data pipeline using Python and PostgreSQL for data analytics",
+        "Landing page and dashboard development using Nextjs and TailwindCSS",
+        "Creating Customer Service Chatbot using ChatGPT API and FastAPI",
+        "Design Dashboard and Data Visualization using Apache Superset and PostgreSQL"
       ],
-      technologies: ["Python", "SQL", "Apache Airflow", "Tableau", "Power BI"]
+      technologies: ["Playwright", "Next.js", "MongoDB", "Docker", "Superset"]
     }
   ]
 
@@ -71,7 +73,7 @@ export default function Experience() {
             Professional <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">Experience</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            A journey through various roles building data-driven solutions and scalable systems
+            A journey through various roles building scalable systems
           </p>
         </motion.div>
 

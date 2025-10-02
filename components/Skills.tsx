@@ -7,8 +7,8 @@ import {
   FaAws, 
   FaGitAlt, 
   FaLinux,
-  FaReact,
-  FaNode
+  FaJava,
+  FaGoogle
 } from 'react-icons/fa'
 import { 
   SiPostgresql, 
@@ -21,7 +21,13 @@ import {
   SiGraphql,
   SiElasticsearch,
   SiPrometheus,
-  SiGo
+  SiGo,
+  SiSqlite,
+  SiApachespark,
+  SiQlik,
+  SiJenkins,
+  SiLinux,
+  SiGithubactions
 } from 'react-icons/si'
 
 export default function Skills() {
@@ -29,17 +35,17 @@ export default function Skills() {
     {
       title: "Programming Languages",
       skills: [
-        { name: "Python", icon: FaPython, level: 95, color: "text-blue-500" },
-        { name: "Go", icon: SiGo, level: 88, color: "text-cyan-500" },
-        { name: "SQL", icon: SiPostgresql, level: 92, color: "text-blue-600" },
-        { name: "JavaScript", icon: FaNode, level: 85, color: "text-yellow-500" }
+        { name: "Python", icon: FaPython, level: 100, color: "text-yellow-500" },
+        { name: "Go", icon: SiGo, level: 80, color: "text-cyan-500" },
+        { name: "SQL", icon: SiPostgresql, level: 90, color: "text-blue-600" },
+        { name: "Java", icon: FaJava, level: 75, color: "text-blue-500" }
       ]
     },
     {
       title: "Databases & Storage",
       skills: [
-        { name: "PostgreSQL", icon: SiPostgresql, level: 90, color: "text-blue-600" },
-        { name: "MongoDB", icon: SiMongodb, level: 85, color: "text-green-600" },
+        { name: "SQLite", icon: SiSqlite, level: 90, color: "text-blue-600" },
+        { name: "MongoDB", icon: SiMongodb, level: 75, color: "text-green-600" },
         { name: "Redis", icon: SiRedis, level: 88, color: "text-red-500" },
         { name: "Elasticsearch", icon: SiElasticsearch, level: 80, color: "text-yellow-600" }
       ]
@@ -47,19 +53,19 @@ export default function Skills() {
     {
       title: "Data Engineering Tools",
       skills: [
-        { name: "Apache Kafka", icon: SiApachekafka, level: 92, color: "text-gray-700" },
-        { name: "Apache Airflow", icon: SiApacheairflow, level: 88, color: "text-blue-500" },
+        { name: "Kafka", icon: SiApachekafka, level: 92, color: "text-gray-700" },
+        { name: "Spark", icon: SiApachespark, level: 75, color: "text-orange-500" },
         { name: "Docker", icon: FaDocker, level: 90, color: "text-blue-500" },
-        { name: "Kubernetes", icon: SiKubernetes, level: 85, color: "text-blue-600" }
+        { name: "Qlik", icon: SiQlik, level: 70, color: "text-green-600" }
       ]
     },
     {
       title: "Cloud & DevOps",
       skills: [
-        { name: "AWS", icon: FaAws, level: 88, color: "text-orange-500" },
-        { name: "Terraform", icon: SiTerraform, level: 82, color: "text-purple-600" },
+        { name: "GCP", icon: FaGoogle, level: 70, color: "text-blue-500" },
+        { name: "Jenkins", icon: SiJenkins, level: 75, color: "text-white-600" },
         { name: "Git", icon: FaGitAlt, level: 95, color: "text-orange-600" },
-        { name: "Linux", icon: FaLinux, level: 90, color: "text-gray-800" }
+        { name: "GitHub Actions", icon: SiGithubactions, level: 80, color: "text-orange-600" }
       ]
     }
   ]
@@ -93,7 +99,7 @@ export default function Skills() {
             Technical <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">Skills</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            A comprehensive toolkit for building scalable data pipelines and robust backend systems
+            A comprehensive toolkit for building scalable software systems
           </p>
         </motion.div>
 
@@ -173,9 +179,11 @@ export default function Skills() {
           </h3>
           <div className="flex flex-wrap justify-center gap-3">
             {[
-              'Apache Spark', 'Apache Beam', 'dbt', 'Tableau', 'Power BI', 
-              'Jenkins', 'GitLab CI', 'Grafana', 'Prometheus', 'ELK Stack',
-              'RabbitMQ', 'Apache Pulsar', 'ClickHouse', 'BigQuery', 'Snowflake'
+              'Apache Flink', 'Apache Superset', 'Tableau', 'Power BI', 
+              'GitLab CI', 'Grafana', 'ELK Stack',
+              'RabbitMQ', 'Apache Iceberg', 'ClickHouse', 'BigQuery', 'Airflow',
+              'Ray', 'FastAPI', 'Flask', 'Django', 'Node.js', 'Express.js',
+              'TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'Tailwind CSS'
             ].map((tech, index) => (
               <motion.span
                 key={tech}

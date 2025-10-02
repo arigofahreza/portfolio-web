@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { FiMail, FiPhone, FiMapPin, FiSend, FiGithub, FiLinkedin, FiTwitter } from 'react-icons/fi'
+import { FiMail, FiPhone, FiMapPin, FiSend, FiGithub, FiLinkedin, FiTwitter, FiInstagram } from 'react-icons/fi'
 import { useState } from 'react'
 
 export default function Contact() {
@@ -21,8 +21,31 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission here
-    console.log('Form submitted:', formData)
+    
+    // WhatsApp number (replace with your actual WhatsApp number)
+    const whatsappNumber = "6281237476923" // Your phone number without + and spaces
+    
+    // Create WhatsApp message
+    const message = `Hi Arigo! I'm ${formData.name}
+
+Subject: ${formData.subject}
+
+${formData.message}
+
+Contact Info:
+Email: ${formData.email}
+
+Looking forward to hearing from you!`
+    
+    // Encode the message for URL
+    const encodedMessage = encodeURIComponent(message)
+    
+    // Create WhatsApp URL
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`
+    
+    // Open WhatsApp in new tab
+    window.open(whatsappURL, '_blank')
+    
     // Reset form
     setFormData({ name: '', email: '', subject: '', message: '' })
   }
@@ -31,13 +54,13 @@ export default function Contact() {
     {
       icon: FiMail,
       title: "Email",
-      value: "your.email@example.com",
-      link: "mailto:your.email@example.com"
+      value: "arigoarg@gmail.com",
+      link: "mailto:arigoarg@gmail.com"
     },
     {
       icon: FiPhone,
       title: "Phone",
-      value: "+62 123 456 7890",
+      value: "+62 812-3747-6923",
       link: "tel:+621234567890"
     },
     {
@@ -62,9 +85,9 @@ export default function Contact() {
       color: "hover:text-blue-600"
     },
     {
-      icon: FiTwitter,
-      name: "Twitter",
-      url: "https://twitter.com/yourusername",
+      icon: FiInstagram,
+      name: "Instagram",
+      url: "https://instagram.com/yourusername",
       color: "hover:text-blue-400"
     }
   ]
@@ -117,23 +140,22 @@ export default function Contact() {
             
             <div className="space-y-6 mb-8">
               {contactInfo.map((item, index) => (
-                <motion.a
+                <motion.div
                   key={index}
-                  href={item.link}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="flex items-center p-4 bg-gray-800/80 backdrop-blur-sm rounded-xl border border-gray-700 hover:border-cyan-400/50 hover:shadow-[0_0_20px_rgba(34,211,238,0.2)] transition-all duration-300 group"
+                  className="flex items-center p-4 bg-gray-800/80 backdrop-blur-sm rounded-xl border border-gray-700 transition-all duration-300"
                 >
-                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mr-4 group-hover:from-cyan-400/30 group-hover:to-purple-400/30 transition-all duration-300">
-                    <item.icon className="w-6 h-6 text-cyan-400 group-hover:text-cyan-300" />
+                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mr-4 transition-all duration-300">
+                    <item.icon className="w-6 h-6 text-cyan-400" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-white">{item.title}</h4>
                     <p className="text-gray-300">{item.value}</p>
                   </div>
-                </motion.a>
+                </motion.div>
               ))}
             </div>
 
@@ -244,7 +266,7 @@ export default function Contact() {
                 className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white py-3 px-6 rounded-lg font-bold hover:from-cyan-400 hover:to-purple-500 focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-gray-800 transition-all duration-300 flex items-center justify-center shadow-[0_0_20px_rgba(34,211,238,0.3)] hover:shadow-[0_0_30px_rgba(34,211,238,0.5)] transform hover:scale-105"
               >
                 <FiSend className="mr-2" />
-                Send Message
+                Send via WhatsApp
               </button>
             </form>
           </motion.div>

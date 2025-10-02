@@ -7,23 +7,23 @@ export default function About() {
   const highlights = [
     {
       icon: FiDatabase,
-      title: "Data Engineering",
-      description: "Building scalable data pipelines and ETL processes"
+      title: "Data Architecture",
+      description: "Designing scalable data systems and intelligent pipelines"
     },
     {
       icon: FiServer,
-      title: "Backend Development", 
-      description: "Creating robust APIs and microservices architecture"
+      title: "Backend Performance", 
+      description: "Building high-performance APIs and distributed systems"
     },
     {
       icon: FiCode,
-      title: "Clean Code",
-      description: "Writing maintainable, testable, and efficient code"
+      title: "AI Automation",
+      description: "Implementing intelligent automation and machine learning solutions"
     },
     {
       icon: FiTrendingUp,
-      title: "Performance",
-      description: "Optimizing systems for high throughput and low latency"
+      title: "Innovation",
+      description: "Driving efficiency and scalability through cutting-edge technology"
     }
   ]
 
@@ -52,8 +52,8 @@ export default function About() {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">About</span> Me
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Experienced professional with a passion for transforming complex data challenges 
-            into elegant, scalable solutions.
+            Engineer specializing in data architecture, backend performance, and AI automation. 
+            Focused on scalability, efficiency, and innovation.
           </p>
         </motion.div>
 
@@ -66,27 +66,27 @@ export default function About() {
             viewport={{ once: true }}
           >
             <h3 className="text-2xl font-semibold text-white mb-6">
-              Building the Future with Data & Code
+              Engineering Tomorrow's Data-Driven Solutions
             </h3>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              With extensive experience in data engineering and backend development, 
-              I specialize in creating efficient data pipelines, robust APIs, and 
-              scalable microservices. My expertise spans across modern technologies 
-              including Python, Go, SQL databases, and cloud platforms.
+              As a Data Engineer, Backend Engineer, and AI Engineer, I specialize in architecting 
+              intelligent data systems that drive business innovation. My expertise spans across 
+              data architecture design, high-performance backend development, and AI automation 
+              implementation using cutting-edge technologies.
             </p>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              I believe in writing clean, maintainable code and implementing best 
-              practices for testing, monitoring, and deployment. Whether it's 
-              processing terabytes of data or handling millions of API requests, 
-              I focus on building systems that perform reliably at scale.
+              I focus on creating scalable, efficient solutions that transform raw data into 
+              actionable insights while ensuring optimal performance and reliability. From 
+              designing robust data pipelines to implementing intelligent automation systems, 
+              I deliver technology solutions that scale with business growth.
             </p>
             
             {/* Key Skills */}
             <div className="flex flex-wrap gap-3">
-              {['Python', 'Go', 'SQL', 'Kafka', 'Docker', 'Kubernetes', 'AWS', 'PostgreSQL'].map((skill) => (
+              {['Python', 'Go', 'Apache Kafka', 'Docker', 'Kubernetes', 'PubSub', 'PostgreSQL', 'Machine Learning', 'Java', 'TypeScript', 'JavaScript'].map((skill) => (
                 <span
                   key={skill}
-                  className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium"
+                  className="px-3 py-1 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-300 border border-cyan-400/30 rounded-full text-sm font-medium backdrop-blur-sm"
                 >
                   {skill}
                 </span>
@@ -109,25 +109,25 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-white/50"
+                className="bg-gray-800/80 backdrop-blur-sm p-6 rounded-xl shadow-2xl border border-gray-700 hover:border-cyan-400/50 hover:shadow-[0_0_30px_rgba(34,211,238,0.2)] transition-all duration-300"
               >
                 <div className={`w-12 h-12 rounded-lg flex items-center justify-center mb-4 ${
-                  index === 0 ? 'bg-gradient-to-br from-blue-100 to-blue-200' :
-                  index === 1 ? 'bg-gradient-to-br from-purple-100 to-purple-200' :
-                  index === 2 ? 'bg-gradient-to-br from-green-100 to-green-200' :
-                  'bg-gradient-to-br from-orange-100 to-orange-200'
+                  index === 0 ? 'bg-gradient-to-br from-cyan-500/20 to-blue-500/20' :
+                  index === 1 ? 'bg-gradient-to-br from-purple-500/20 to-pink-500/20' :
+                  index === 2 ? 'bg-gradient-to-br from-green-500/20 to-emerald-500/20' :
+                  'bg-gradient-to-br from-orange-500/20 to-red-500/20'
                 }`}>
                   <item.icon className={`w-6 h-6 ${
-                    index === 0 ? 'text-blue-600' :
-                    index === 1 ? 'text-purple-600' :
-                    index === 2 ? 'text-green-600' :
-                    'text-orange-600'
+                    index === 0 ? 'text-cyan-400' :
+                    index === 1 ? 'text-purple-400' :
+                    index === 2 ? 'text-green-400' :
+                    'text-orange-400'
                   }`} />
                 </div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                <h4 className="text-lg font-semibold text-white mb-2">
                   {item.title}
                 </h4>
-                <p className="text-gray-600 text-sm">
+                <p className="text-gray-300 text-sm">
                   {item.description}
                 </p>
               </motion.div>
