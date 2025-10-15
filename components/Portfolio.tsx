@@ -24,9 +24,9 @@ export default function Portfolio() {
       }
     },
     {
-      title: "Microservices Architecture",
+      title: "Online News Data Pipeline",
       description: "Designed and implemented microservices architecture serving 1M+ API requests daily with 99.9% uptime using Go and Kubernetes.",
-      image: "/images/projects/backend/microservices-architecture.jpg",
+      image: "/images/projects/data-engineering/news-project.png",
       technologies: ["Go", "Kubernetes", "Docker", "PostgreSQL", "Redis"],
       category: "Backend Engineer", 
       icon: FiServer,
@@ -38,7 +38,7 @@ export default function Portfolio() {
     {
       title: "E-commerce Platform",
       description: "Developed complete e-commerce solution with payment integration, inventory management, and analytics dashboard for small business.",
-      image: "/images/projects/freelance/ecommerce-platform.jpg",
+      image: "/images/projects/data-engineering/sosmed-project.png",
       technologies: ["React", "Node.js", "MongoDB", "Stripe", "AWS"],
       category: "Freelance",
       icon: FiCloud,
@@ -50,7 +50,7 @@ export default function Portfolio() {
     {
       title: "API Gateway & Auth Service",
       description: "Built centralized API gateway with authentication, rate limiting, and monitoring capabilities handling millions of requests.",
-      image: "/images/projects/backend/api-gateway-auth.jpg",
+      image: "/images/projects/data-engineering/news-project.png",
       technologies: ["Node.js", "JWT", "Redis", "MongoDB", "Nginx"],
       category: "Backend Engineer",
       icon: FiServer,
@@ -62,7 +62,7 @@ export default function Portfolio() {
     {
       title: "Machine Learning Pipeline",
       description: "Developed end-to-end ML pipeline for fraud detection with automated model training, validation, and deployment.",
-      image: "/images/projects/data-engineering/ml-pipeline.jpg",
+      image: "/images/projects/data-engineering/sosmed-project.png",
       technologies: ["Python", "Scikit-learn", "MLflow", "Docker", "Kubernetes"],
       category: "Data Engineer",
       icon: FiDatabase,
@@ -74,7 +74,7 @@ export default function Portfolio() {
     {
       title: "Restaurant Management System",
       description: "Custom restaurant POS system with inventory tracking, staff management, and financial reporting for local restaurant chain.",
-      image: "/images/projects/freelance/restaurant-pos-system.jpg",
+      image: "/images/projects/data-engineering/news-project.png",
       technologies: ["Vue.js", "Laravel", "MySQL", "Tailwind", "PWA"],
       category: "Freelance",
       icon: FiServer,
@@ -118,19 +118,19 @@ export default function Portfolio() {
   }
 
   return (
-    <section id="portfolio" className="py-16 bg-gradient-to-br from-gray-900 via-black to-gray-800 relative overflow-hidden">
-      {/* Background decorations */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(139,92,246,0.1),transparent_50%)]"></div>
+    <section id="portfolio" className="py-16 bg-white relative overflow-hidden">
+      {/* Clean background elements */}
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.03)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
       
-      {/* Neon geometric elements */}
-      <div className="absolute top-20 right-20 w-32 h-32 border-2 border-cyan-400/30 transform rotate-45 animate-spin-slow"></div>
-      <div className="absolute bottom-20 left-20 w-24 h-24 border-2 border-pink-400/30 transform rotate-12 animate-reverse-spin"></div>
-      <div className="absolute top-1/3 left-10 w-16 h-16 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 transform rotate-45"></div>
-      <div className="absolute bottom-1/3 right-10 w-20 h-20 bg-gradient-to-l from-pink-500/20 to-purple-500/20 transform -rotate-12"></div>
+      {/* Simple geometric shapes */}
+      <div className="absolute top-20 left-20 w-32 h-32 bg-blue-100/20 rounded-full"></div>
+      <div className="absolute bottom-20 right-20 w-24 h-24 bg-slate-100/20 rounded-full"></div>
+      <div className="absolute top-1/2 left-10 w-16 h-16 border border-blue-200/30 transform rotate-45"></div>
+      <div className="absolute top-1/3 right-10 w-20 h-20 border border-slate-200/30 transform -rotate-12"></div>
       
-      {/* Glowing lines */}
-      <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400/50 to-transparent"></div>
-      <div className="absolute bottom-1/4 right-0 w-full h-px bg-gradient-to-l from-transparent via-purple-400/50 to-transparent"></div>
+      {/* Clean lines */}
+      <div className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-200/50 to-transparent"></div>
+      <div className="absolute bottom-1/4 right-0 w-full h-px bg-gradient-to-l from-transparent via-slate-200/50 to-transparent"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
@@ -140,10 +140,10 @@ export default function Portfolio() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-400">Projects</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Featured <span className="text-blue-600">Projects</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-8">
             A showcase of data engineering, backend development, and freelance projects that demonstrate 
             scalability, performance, and clean architecture
           </p>
@@ -156,8 +156,8 @@ export default function Portfolio() {
                 onClick={() => handleFilterChange(category)}
                 className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 ${
                   activeFilter === category
-                    ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-[0_0_20px_rgba(34,211,238,0.4)]'
-                    : 'bg-gray-800/80 text-gray-300 border-2 border-gray-600 hover:border-cyan-400 hover:text-cyan-400 hover:shadow-[0_0_10px_rgba(34,211,238,0.2)]'
+                    ? 'bg-blue-600 text-white shadow-md'
+                    : 'bg-white text-gray-700 border-2 border-gray-200 hover:border-blue-400 hover:text-blue-600 hover:shadow-md'
                 }`}
               >
                 {category}
@@ -177,7 +177,7 @@ export default function Portfolio() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-gray-800/80 backdrop-blur-sm rounded-xl border border-gray-700 hover:border-cyan-400/50 hover:shadow-[0_0_40px_rgba(34,211,238,0.2)] transition-all duration-300 hover:-translate-y-2 group"
+              className="bg-white rounded-xl border border-gray-200 hover:border-blue-400/50 hover:shadow-lg transition-all duration-300 hover:-translate-y-2 group"
             >
               {/* Project Image - No cropping */}
               <div className="relative overflow-hidden rounded-t-xl">
@@ -186,13 +186,13 @@ export default function Portfolio() {
                     src={project.image}
                     alt={project.title}
                     fill
-                    className="object-contain bg-gray-900/50 transition-transform duration-500 group-hover:scale-105"
+                    className="object-contain bg-gray-50 transition-transform duration-500 group-hover:scale-105"
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                   {/* Overlay with icon */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="absolute top-4 right-4 bg-gray-900/90 backdrop-blur-sm rounded-full p-3 border border-gray-700 transform scale-90 group-hover:scale-100 transition-transform duration-300">
-                      <project.icon className="w-5 h-5 text-cyan-400" />
+                    <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-full p-3 border border-gray-200 transform scale-90 group-hover:scale-100 transition-transform duration-300">
+                      <project.icon className="w-5 h-5 text-blue-600" />
                     </div>
                   </div>
                 </div>
@@ -202,19 +202,19 @@ export default function Portfolio() {
               <div className="p-6">
                 {/* Category Badge */}
                 <div className="flex items-center justify-between mb-4">
-                  <span className="inline-flex items-center px-3 py-1 text-xs font-semibold text-cyan-400 bg-cyan-400/10 border border-cyan-400/30 rounded-full">
-                    <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2"></span>
+                  <span className="inline-flex items-center px-3 py-1 text-xs font-semibold text-blue-600 bg-blue-50 border border-blue-200 rounded-full">
+                    <span className="w-2 h-2 bg-blue-600 rounded-full mr-2"></span>
                     {project.category}
                   </span>
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">
+                <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors duration-300">
                   {project.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-gray-300 mb-6 leading-relaxed text-sm">
+                <p className="text-gray-600 mb-6 leading-relaxed text-sm">
                   {project.description}
                 </p>
 
@@ -223,13 +223,13 @@ export default function Portfolio() {
                   {project.technologies.slice(0, 3).map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1.5 bg-gray-700/50 text-gray-300 rounded-lg text-xs font-medium border border-gray-600 hover:border-cyan-400/50 hover:text-cyan-400 transition-all duration-300"
+                      className="px-3 py-1.5 bg-gray-100 text-gray-600 rounded-lg text-xs font-medium border border-gray-200 hover:border-blue-400/50 hover:text-blue-600 transition-all duration-300"
                     >
                       {tech}
                     </span>
                   ))}
                   {project.technologies.length > 3 && (
-                    <span className="px-3 py-1.5 text-gray-400 text-xs font-medium bg-gray-800/50 rounded-lg border border-gray-600">
+                    <span className="px-3 py-1.5 text-blue-600 text-xs font-medium bg-blue-50 rounded-lg border border-blue-200">
                       +{project.technologies.length - 3} more
                     </span>
                   )}
@@ -242,7 +242,7 @@ export default function Portfolio() {
                       href={project.links.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 flex items-center justify-center px-4 py-2.5 bg-gray-700/50 text-white rounded-lg hover:bg-gray-600 transition-all duration-300 text-sm font-medium border border-gray-600 hover:border-gray-500 group/link"
+                      className="flex-1 flex items-center justify-center px-4 py-2.5 bg-gray-100 text-gray-700 rounded-lg hover:bg-blue-50 hover:text-blue-600 transition-all duration-300 text-sm font-medium border border-gray-200 hover:border-blue-300 group/link"
                     >
                       <FiGithub className="mr-2 w-4 h-4 group-hover/link:rotate-12 transition-transform duration-300" />
                       Code
@@ -252,7 +252,7 @@ export default function Portfolio() {
                     href={project.links.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`flex items-center justify-center px-4 py-2.5 border-2 border-cyan-400 text-cyan-400 rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 text-sm font-medium hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] group/link ${
+                    className={`flex items-center justify-center px-4 py-2.5 border-2 border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition-all duration-300 text-sm font-medium hover:shadow-md group/link ${
                       !project.links.github || project.links.github === "#" ? "flex-1" : "flex-1"
                     }`}
                   >
@@ -280,8 +280,8 @@ export default function Portfolio() {
               disabled={currentPage === 1}
               className={`p-3 rounded-lg border-2 transition-all duration-300 ${
                 currentPage === 1
-                  ? 'border-gray-600 text-gray-600 cursor-not-allowed'
-                  : 'border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black hover:shadow-[0_0_15px_rgba(34,211,238,0.3)]'
+                  ? 'border-gray-300 text-gray-400 cursor-not-allowed'
+                  : 'border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white hover:shadow-md'
               }`}
             >
               <FiChevronLeft className="w-5 h-5" />
@@ -295,8 +295,8 @@ export default function Portfolio() {
                   onClick={() => goToPage(page)}
                   className={`w-12 h-12 rounded-lg font-semibold transition-all duration-300 ${
                     currentPage === page
-                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-[0_0_20px_rgba(34,211,238,0.4)]'
-                      : 'border-2 border-gray-600 text-gray-400 hover:border-cyan-400 hover:text-cyan-400 hover:shadow-[0_0_10px_rgba(34,211,238,0.2)]'
+                      ? 'bg-blue-600 text-white shadow-md'
+                      : 'border-2 border-gray-200 text-gray-600 hover:border-blue-400 hover:text-blue-600 hover:shadow-md'
                   }`}
                 >
                   {page}
@@ -310,8 +310,8 @@ export default function Portfolio() {
               disabled={currentPage === totalPages}
               className={`p-3 rounded-lg border-2 transition-all duration-300 ${
                 currentPage === totalPages
-                  ? 'border-gray-600 text-gray-600 cursor-not-allowed'
-                  : 'border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-black hover:shadow-[0_0_15px_rgba(34,211,238,0.3)]'
+                  ? 'border-gray-300 text-gray-400 cursor-not-allowed'
+                  : 'border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white hover:shadow-md'
               }`}
             >
               <FiChevronRight className="w-5 h-5" />
@@ -327,7 +327,7 @@ export default function Portfolio() {
           viewport={{ once: true }}
           className="text-center mt-6"
         >
-          <p className="text-gray-400 text-sm">
+          <p className="text-gray-600 text-sm">
             Showing {startIndex + 1}-{Math.min(endIndex, filteredProjects.length)} of {filteredProjects.length} projects
             {activeFilter !== 'All' && (
               <span className="ml-2 text-cyan-400">

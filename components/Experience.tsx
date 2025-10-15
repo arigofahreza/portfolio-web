@@ -49,17 +49,17 @@ export default function Experience() {
   ]
 
   return (
-    <section id="experience" className="py-20 bg-gradient-to-r from-black via-gray-900 to-gray-800 relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(34,211,238,0.03)_1px,transparent_1px)] bg-[size:60px_60px]"></div>
+    <section id="experience" className="py-20 bg-gray-50 relative overflow-hidden">
+      {/* Clean background decoration */}
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.03)_1px,transparent_1px)] bg-[size:60px_60px]"></div>
       
-      {/* Neon accent shapes */}
-      <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-purple-500/20 to-transparent transform rotate-45 filter blur-xl"></div>
-      <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-cyan-500/15 to-transparent transform -rotate-12 filter blur-xl"></div>
+      {/* Simple accent shapes */}
+      <div className="absolute top-0 right-0 w-64 h-64 bg-blue-100/20 transform rotate-45 filter blur-xl"></div>
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-slate-100/15 transform -rotate-12 filter blur-xl"></div>
       
-      {/* Sharp diagonal lines */}
-      <div className="absolute top-1/4 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-purple-400/30 to-transparent transform -skew-y-1"></div>
-      <div className="absolute bottom-1/4 right-0 w-full h-0.5 bg-gradient-to-l from-transparent via-cyan-400/30 to-transparent transform skew-y-1"></div>
+      {/* Clean lines */}
+      <div className="absolute top-1/4 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-blue-200/30 to-transparent"></div>
+      <div className="absolute bottom-1/4 right-0 w-full h-0.5 bg-gradient-to-l from-transparent via-slate-200/30 to-transparent"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
@@ -69,17 +69,17 @@ export default function Experience() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Professional <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">Experience</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Professional <span className="text-blue-600">Experience</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            A journey through various roles building scalable systems
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
+            a journey through various roles building scalable systems
           </p>
         </motion.div>
 
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-4 md:left-1/2 transform md:-translate-x-px top-0 bottom-0 w-0.5 bg-gradient-to-b from-cyan-400 via-purple-500 to-pink-400"></div>
+          <div className="absolute left-4 md:left-1/2 transform md:-translate-x-px top-0 bottom-0 w-0.5 bg-blue-300"></div>
 
           {experiences.map((exp, index) => (
             <motion.div
@@ -93,24 +93,24 @@ export default function Experience() {
               }`}
             >
               {/* Timeline dot */}
-              <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-gradient-to-r from-cyan-400 to-purple-500 border-2 border-gray-900 rounded-full shadow-[0_0_20px_rgba(34,211,238,0.5)] z-10"></div>
+              <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-4 h-4 bg-blue-600 border-2 border-white rounded-full shadow-lg z-10"></div>
 
               {/* Content */}
               <div className={`w-full md:w-5/12 ml-12 md:ml-0 ${index % 2 === 0 ? 'md:pr-8' : 'md:pl-8'}`}>
-                <div className="bg-gray-800/80 backdrop-blur-sm p-6 rounded-xl shadow-2xl border border-gray-700 hover:border-cyan-400/50 hover:shadow-[0_0_30px_rgba(34,211,238,0.2)] transition-all duration-300">
+                <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 hover:border-blue-200 hover:shadow-xl transition-all duration-300">
                   <div className="flex items-start justify-between mb-4">
                     <div>
-                      <h3 className="text-xl font-bold text-white mb-1">
+                      <h3 className="text-xl font-bold text-gray-900 mb-1">
                         {exp.title}
                       </h3>
-                      <p className="text-cyan-400 font-semibold mb-2">
+                      <p className="text-blue-600 font-semibold mb-2">
                         {exp.company}
                       </p>
                     </div>
                     <FiBriefcase className="text-blue-600 w-6 h-6 mt-1" />
                   </div>
 
-                  <div className="flex flex-wrap gap-4 mb-4 text-sm text-white-600">
+                  <div className="flex flex-wrap gap-4 mb-4 text-sm text-gray-600">
                     <div className="flex items-center">
                       <FiCalendar className="w-4 h-4 mr-1" />
                       {exp.period}
@@ -123,7 +123,7 @@ export default function Experience() {
 
                   <ul className="space-y-2 mb-4">
                     {exp.description.map((item, idx) => (
-                      <li key={idx} className="text-white-600 text-sm leading-relaxed flex">
+                      <li key={idx} className="text-gray-600 text-sm leading-relaxed flex">
                         <span className="text-blue-600 mr-2">•</span>
                         {item}
                       </li>
@@ -134,7 +134,7 @@ export default function Experience() {
                     {exp.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="px-2 py-1 bg-gray-100 text-gray-700 rounded text-xs font-medium"
+                        className="px-2 py-1 bg-blue-50 text-blue-700 rounded text-xs font-medium border border-blue-200"
                       >
                         {tech}
                       </span>

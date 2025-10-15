@@ -36,16 +36,16 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="bg-gradient-to-r from-gray-900 via-purple-900 to-violet-900 text-white relative overflow-hidden">
+    <footer className="bg-gray-900 text-white relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500"></div>
+      <div className="absolute top-0 left-0 w-full h-1 bg-blue-600"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div className="md:col-span-2">
             <h3 className="text-2xl font-bold mb-4">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+              <span className="text-white">
                 Arigo Fahreza
               </span>
             </h3>
@@ -59,7 +59,7 @@ export default function Footer() {
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 bg-gray-800 rounded-full hover:bg-gray-700 transition-colors duration-300 group"
+                  className="p-2 bg-gray-800 rounded-full hover:bg-blue-600 transition-colors duration-300 group"
                 >
                   <item.icon className="w-5 h-5 text-gray-300 group-hover:text-white" />
                 </a>
@@ -75,7 +75,7 @@ export default function Footer() {
                 <li key={item.name}>
                   <a
                     href={item.href}
-                    className="text-gray-300 hover:text-white transition-colors duration-300"
+                    className="text-gray-300 hover:text-blue-400 transition-colors duration-300"
                   >
                     {item.name}
                   </a>

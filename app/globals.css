@@ -60,6 +60,14 @@ html {
     animation: blob 7s infinite;
   }
   
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-wiggle {
+    animation: wiggle 3s ease-in-out infinite;
+  }
+  
   .animation-delay-2000 {
     animation-delay: 2s;
   }
@@ -133,5 +141,26 @@ html {
   }
   to {
     box-shadow: 0 0 30px rgba(34, 211, 238, 0.8);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+@keyframes wiggle {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  75% {
+    transform: rotate(-5deg);
   }
 }
